@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="index.css">
+
+    <title>HydTour - One Site for Famous Hyderabad Places</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="index.html">HydTour</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto">
+            
+            
+            <a class="nav-link" href="follow.html" id="navItem4">Follow Us</a>
+        </div>
+    </div>
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="about.html"
+              >About Us <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact Us</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input
+            class="form-control mr-sm-2"
+            type="search"
+            placeholder="Search"
+          />
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+            Search
+          </button>
+        </form>
+        <div class="mx-2">
+          <button
+            class="btn btn-danger"
+            data-toggle="modal"
+            data-target="#loginModal"
+          >
+            Login
+          </button>
+          <button
+            class="btn btn-danger"
+            data-toggle="modal"
+            data-target="#signupModal"
+          >
+            SignUp
+          </button>
+        </div>
+      </div>
+       <!-- Add a Dark Mode toggle button -->
+      <!-- In your HTML -->
+<button id="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+    </nav>
+    <!-- Login Modal -->
+    <div
+      class="modal fade"
+      id="loginModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="loginModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Login to HydTour</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  placeholder="Enter email"
+                />
+                <small id="emailHelp" class="form-text text-muted"
+                  >We'll never share your email with anyone else.</small
+                >
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                  placeholder="Password"
+                />
+              </div>
+              <div class="form-group form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="exampleCheck1"
+                />
+                <label class="form-check-label" for="exampleCheck1"
+                  >Check me out</label
+                >
+              </div>
+              <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sign-up Modal -->
+    <div
+      class="modal fade"
+      id="signupModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="signupModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Create HydTour account
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  placeholder="Enter email"
+                />
+                <small id="emailHelp" class="form-text text-muted"
+                  >We'll never share your email with anyone else.</small
+                >
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                  placeholder="Password"
+                />
+              </div>
+              <div class="form-group">
+                <label for="cexampleInputPassword1">Confirm Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="cexampleInputPassword1"
+                  placeholder="Confirm Password"
+                />
+              </div>
+              <button type="submit" class="btn btn-primary">
+                Create Account
+              </button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="album py-5 bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img
+                width="100%"
+                height="225"
+                src="https://res.cloudinary.com/thrillophilia/image/upload/c_fill,f_auto,fl_progressive.strip_profile,g_auto,h_600,q_auto,w_auto/v1/filestore/2s1kmz7hk9xbme0fupi9m9psx8yz_shutterstock_1911230902.jpg"
+                alt="Charminar"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  <b>CHARMINAR:</b> The landmark has become known globally as a
+                  symbol of Hyderabad and is listed among the most recognised
+                  structures in India.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a href="charminar.html"
+                      ><button
+                        type="button"
+                        class="btn btn-sm btn-outline-warning"
+                      >
+                        Read more
+                      </button></a
+                    >
+                  </div>
+                  <div class="btn-group">
+                    <a href="https://www.google.com/maps/place/Charminar/@17.3615636,78.4724758,17z/data=!3m1!4b1!4m5!3m4!1s0x3bcb978a6e1a939b:0xcb5a69e4aaf113fb!8m2!3d17.3615636!4d78.4746645"><button
+                      type="button"
+                      class="btn btn-sm btn-outline-warning"
+                    >
+                      Map
+                    </button>
+                  </a>
+                  </div>
+                  <small class="text-muted">3 km from city center</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img
+                width="100%"
+                height="225"
+                src="https://res.cloudinary.com/thrillophilia/image/upload/c_fill,f_auto,fl_progressive.strip_profile,g_auto,h_600,q_auto,w_auto/v1/filestore/o2ezyc9ksplb6r1ovz7uatq24ex6_1582893474_shutterstock_1039344904.jpg"
+                alt="Buddha Statue"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  <b>BUDDHA STATUE:</b> It is the world's tallest monolith of
+                  Gautama Buddha, erected on Gibraltar Rock in the middle of
+                  Hussain Sagar, Tank Bund.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a href="buddha.html"
+                      ><button
+                        type="button"
+                        class="btn btn-sm btn-outline-warning"
+                      >
+                        Read more
+                      </button>
+                    </a>
+                  </div>
+                    <div class="btn-group">
+                      <a href="https://www.google.com/maps/place/Buddha+Statue/@17.4155657,78.4727843,17z/data=!3m1!4b1!4m5!3m4!1s0x3bcb975801aff093:0x4c47ef6c115b0424!8m2!3d17.4155657!4d78.474973"><button
+                        type="button"
+                        class="btn btn-sm btn-outline-warning"
+                      >
+                        Map
+                      </button>
+                    </a>
+                    </div>
+                  <small class="text-muted">5km from city center</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img width="100%"
+              height="225" src="https://images.unsplash.com/photo-1470075446540-4391a96ec621?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Z29sY29uZGElMjBmb3J0JTIwaHlkZXJhYmFkJTIwaW5kaWF8ZW58MHx8MHx8&w=1000&q=80" alt="Golconda Fort">
+              <div class="card-body">
+                <p class="card-text">
+                  <b>GOLCONDA FORT:</b> It is a fortified citadel built by the Qutb Shahi dynasty as the capital of the Golconda Sultanate, located in Hyderabad.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a href="golconda.html"><button
+                      type="button"
+                      class="btn btn-sm btn-outline-warning"
+                    >
+                      Read more
+                    </button></a>
+                  </div>
+                  <div class="btn-group">
+                    <a href="https://www.google.com/maps/place/Golconda+Fort/@17.383309,78.3988641,17z/data=!3m1!4b1!4m5!3m4!1s0x3bcb968ea6aea98f:0x6b76ecdfd65a335a!8m2!3d17.383309!4d78.4010528">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-warning"
+                    >
+                      Map
+                    </button>
+                  </a>
+                  </div>
+                  <small class="text-muted">9   km from city center</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img width="100%"
+              height="225" src="https://www.holidify.com/images/cmsuploads/compressed/day-tour-bg-new_20220523164637.jpeg" alt="">
+              <div class="card-body">
+                <p class="card-text">
+                  <b>RAMOJI-FILM CITY:</b>
+                  Ramoji Film City is certified as the World's largest Film Studio Complex by the Guinness Book of World Records.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-warning"
+                    >
+                      Read more
+                    </button>
+                  </div><div class="btn-group">
+                    <a href="https://www.google.com/maps?q=ramoji+film+city&um=1&ie=UTF-8&sa=X&ved=2ahUKEwj7tKLTrPj4AhW33jgGHZjLDA8Q_AUoAXoECAIQAw">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-warning"
+                    >
+                      Map
+                    </button>
+                  </a>
+                  </div>
+                  <small class="text-muted">25km from city center</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img width="100%"
+              height="225" src="https://www.holidify.com/images/cmsuploads/compressed/twccvrvb_20220523165223.jpeg" alt="Wonderla">
+              <div class="card-body">
+                <p class="card-text">
+                  <b>WONDERLA:</b>
+                  This Amusement and Theme Park is the best water park with more than 43 fun and thrilling rides, it is a fun place for a family outing.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-warning"
+                    >
+                      Read more
+                    </button>
+                  </div><div class="btn-group">
+                    <a href="https://www.google.com/maps/search/wonderla/@17.4150396,78.4025411,12z/data=!3m1!4b1">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-warning"
+                    >
+                      Map
+                    </button>
+                  </a>
+                  </div>
+                  <small class="text-muted">19 km from city center</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img width="100%"
+              height="225" src="https://www.holidify.com/images/cmsuploads/compressed/HomeGravityZipPreview_20220523160405.jpeg" alt="GravityZip">
+              <div class="card-body">
+                <p class="card-text">
+                  <b>GRAVITY ZIP:</b>
+                  It is India’s first indoor sky diving arena. It features the first of its kind indoor skydiving wind tunnel, which is the first in India.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-warning"
+                    >
+                      Read more
+                    </button>
+                  </div><div class="btn-group">
+                    <a href="https://www.google.com/maps/place/GravityZip/@17.3901183,78.3233398,17z/data=!3m1!4b1!4m5!3m4!1s0x3bcb9598dbc20af5:0xd78314ad9c259bcf!8m2!3d17.3901183!4d78.3255285">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-warning"
+                    >
+                      Map
+                    </button>
+                  </a>
+                  </div>
+                  <small class="text-muted">18 km from city center</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img width="100%"
+              height="225" src="https://www.holidify.com/images/cmsuploads/compressed/144dc4c2-34b7-4a96-b1d6-29968c124db4_20220523155512.jpeg" alt="ThrillCity">
+              <div class="card-body">
+                <p class="card-text">
+                  <b>THRILL CITY:</b>
+                  A virtual reality amusement park which offers a flying simulator, cricket simulator, bumping cars, a bowling alley, splash coaster and much more.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-warning"
+                    >
+                      Read more
+                    </button>
+                  </div><div class="btn-group">
+                    <a href="https://www.google.com/maps/place/Thrill+City/@17.4354103,78.472221,17z/data=!3m1!4b1!4m5!3m4!1s0x3bcb911a5cd4f98f:0x38ee636dfb68f15d!8m2!3d17.4354103!4d78.4744097">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-warning"
+                    >
+                      Map
+                    </button>
+                  </a>
+                  </div>
+                  <small class="text-muted">6 km from city center</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img width="100%"
+              height="225" src="https://www.holidify.com/images/cmsuploads/compressed/1738579797_8197aa9f2e_b_20170823192828.jpg" alt="SnowWorld">
+              <div class="card-body">
+                <p class="card-text">
+                  <b>SNOW WORLD:</b>
+                  With snow fall produced of mineral water, It offers activities like ice skating, ice boarding, snow slides with bumping-car, toboggan rides, etc.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-warning"
+                    >
+                      Read more
+                    </button>
+                  </div><div class="btn-group">
+                    <a href="https://www.google.com/maps?q=snow+world&um=1&ie=UTF-8&sa=X&ved=2ahUKEwjM6cuHrvj4AhU6-zgGHXoHApUQ_AUoAnoECAIQBA">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-warning"
+                    >
+                      Map
+                    </button>
+                  </a>
+                  </div>
+                  <small class="text-muted">3 km from city center</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img width="100%"
+              height="225" src="https://www.holidify.com/images/cmsuploads/compressed/Long_Exposure_of_Cable_bridge_on_Durgam_Cheruvu_20220522165630.jpg" alt="DurgamCheruvu">
+              <div class="card-body">
+                <p class="card-text">
+                  <b>DURGAM CHERUVU BRIDGE:</b>
+                  A beautiful cable bridge is the longest bridge in Hyderabad and perfect for a night drive when the bridge lights up brilliantly.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-warning"
+                    >
+                      Read more
+                    </button>
+                  </div><div class="btn-group">
+                    <a href="https://www.google.com/maps/place/Durgam+Cheruvu+Cable+Bridge,+Hyderabad,+Telangana/@17.4335013,78.3955815,17z/data=!3m1!4b1!4m5!3m4!1s0x3bcb9157a1e9eb37:0xc0458146f44eea9!8m2!3d17.4335013!4d78.3977702">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-warning"
+                    >
+                      Map
+                    </button>
+                  </a>
+                  </div>
+                  <small class="text-muted">11 km from city center</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img width="100%"
+              height="225" src="https://www.holidify.com/images/cmsuploads/compressed/Falaknuma_Palace_20180806155019_20180806155054.jpg" alt="FalaknumaPalace">
+              <div class="card-body">
+                <p class="card-text">
+                  <b>TAJ FALAKNUMA PALACE:</b>
+                  Perched around 2000 metres above the city was once the royal residence of Nizam- probably the richest man in the world
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-warning"
+                    >
+                      Read more
+                    </button>
+                  </div><div class="btn-group">
+                    <a href="https://www.google.com/maps/place/Taj+Falaknuma+Palace,+Hyderabad/@17.3314792,78.465276,17z/data=!3m1!4b1!4m8!3m7!1s0x3bcbbd5654172a41:0xd3dbb0c22420002e!5m2!4m1!1i2!8m2!3d17.3314851!4d78.4674197">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-warning"
+                    >
+                      Map
+                    </button>
+                  </a>
+                  </div>
+                  <small class="text-muted">6 km from city center</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img width="100%"
+              height="225" src="https://www.holidify.com/images/cmsuploads/compressed/800px-A_Green_Walway_in_Botanical_Garden_Hyderabad_Telangana_20200717105704.jpg" alt="BotanicalGarden">
+              <div class="card-body">
+                <p class="card-text">
+                  <b>BOTANICAL GARDEN:</b>
+                  This is a major attraction of the city. The park boasts of a rich variety of plants, shrubs, trees, flowering plants and medicinal herbs.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-warning"
+                    >
+                      Read more
+                    </button>
+                  </div><div class="btn-group">
+                    <a href="https://www.google.com/maps/place/Shri+Kotla+Vijayabhaskara+Reddy+Botanical+Garden/@17.4539898,78.3550262,17z/data=!3m1!4b1!4m5!3m4!1s0x3bcb93b8005951fb:0xd308535fa9706fd3!8m2!3d17.4539898!4d78.3572149">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-warning"
+                    >
+                      Map
+                    </button>
+                  </a>
+                  </div>
+                  <small class="text-muted">16 km from city center</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img width="100%"
+              height="225" src="https://www.holidify.com/images/cmsuploads/compressed/4463_20190226183135.JPG" alt="GravityZip">
+              <div class="card-body">
+                <p class="card-text">
+                  <b>NEHRU ZOOLOGICAL PARK:</b>
+                  This is one of the largest zoos in India which houses the Indian Rhino, Asiatic Lion, Bengal Tiger, Indian Elephant, panthers, pythons, deers.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-warning"
+                    >
+                      Read more
+                    </button>
+                  </div><div class="btn-group">
+                    <a href="https://www.google.com/maps/place/Nehru+Zoological+Park/@17.3517077,78.4436186,17z/data=!3m1!4b1!4m5!3m4!1s0x3bcb97c6c008fa9d:0x7b71bb447d86245b!8m2!3d17.3517077!4d78.4458073">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-warning"
+                    >
+                      Map
+                    </button>
+                  </a>
+                  </div>
+                  <small class="text-muted">6 km from city center</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="container">
+            <p class="float-right"><a href="#">Back to top</a></p>
+            <p>
+              © 2023-present, Prashanth Reddy, · <a href="#">Privacy</a> ·
+              <a href="#">Terms</a>
+            </p>
+          </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"
+  ></script>
+    <script src="./darkmode.js"></script>
+  </body>
+</html>

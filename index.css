@@ -1,0 +1,162 @@
+
+/* Global styles */
+body {
+  background-color: #333; /* Dark background color */
+  font-family: Arial, sans-serif;
+  color: #fff; /* Text color */
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: #111; /* Dark navbar background color */
+  border-bottom: 1px solid #444;
+}
+
+.navbar-brand {
+  font-size: 30px;
+  font-weight: bold;
+  color: #e74c3c;
+}
+
+.navbar-toggler-icon {
+  background-color: #e74c3c;
+}
+
+.navbar-nav .nav-link {
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #e74c3c;
+}
+
+/* Header styles */
+.album {
+  background-color: #222; /* Dark content background color */
+  padding: 50px 0;
+}
+
+.card {
+  border: none;
+  transition: transform 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #444; /* Dark card background color */
+  color: #fff; /* Card text color */
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-img-top {
+  object-fit: cover;
+  height: 225px;
+}
+
+.card-text {
+  color: #fff; /* Text color */
+}
+
+.btn-outline-warning {
+  color: #e74c3c;
+  border-color: #e74c3c;
+}
+
+.btn-outline-warning:hover {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+/* Footer styles */
+footer {
+  margin-top: 50px;
+  padding-top: 20px;
+  text-align: center;
+  background-color: #111; /* Dark footer background color */
+  color: #fff;
+}
+
+/* Map button styles */
+.btn-map {
+  background-color: #3498db;
+  color: #fff;
+  border-color: #3498db;
+}
+
+.btn-map:hover {
+  background-color: #2980b9;
+  border-color: #2980b9;
+}
+
+/* Additional styles for improved readability */
+h5.modal-title {
+  color: #fff; /* Text color */
+}
+
+.modal-body {
+  background-color: #333; /* Dark background color */
+  color: #fff; /* Text color */
+}
+
+.modal-footer button.btn-secondary {
+  background-color: #111; /* Dark button background color */
+  color: #fff;
+}
+
+.modal-footer button.btn-secondary:hover {
+  background-color: #222; /* Dark button hover background color */
+}
+
+/* Dark mode styles */
+.dark-mode {
+  background-color: #0d1117; /* Dark background color similar to GitHub */
+  color: #c9d1d9; /* Light text color for contrast */
+}
+
+.dark-mode a {
+  color: #58a6ff; /* Links in dark mode */
+}
+
+.dark-mode .card {
+  background-color: #161b22; /* Card background color */
+  color: #c9d1d9; /* Card text color */
+  border: 1px solid #30363d; /* Card border color */
+}
+
+.dark-mode .card:hover {
+  background-color: #0d1117; /* Hover effect for cards */
+}
+
+.dark-mode .card button {
+  background-color: #30363d; /* Button background color in cards */
+  color: #c9d1d9; /* Button text color in cards */
+  border: none; /* Remove button border */
+  cursor: pointer; /* Add cursor pointer on hover */
+}
+
+.dark-mode .card button:hover {
+  background-color: #24292e; /* Button hover effect in cards */
+}
+
+/* Customize other elements as needed */
+
+/* For toggle button */
+.dark-mode-toggle {
+  background-color: #30363d; /* Toggle button background color */
+  color: #c9d1d9; /* Toggle button text color */
+  border: none; /* Remove button border */
+  cursor: pointer; /* Add cursor pointer on hover */
+}
+
+.dark-mode-toggle:hover {
+  background-color: #24292e; /* Toggle button hover effect */
+}
+
+/* Dark mode styles */
+body.dark-mode,
+html.dark-mode {
+    background-color: #0d1117;
+    color: #c9d1d9;
+}
